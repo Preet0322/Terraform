@@ -2,16 +2,16 @@ provider “aws” {
     region = “us-east-1”
 }
  
-resource “aws_instance” “ramserver1” {
+resource “aws_instance” “Terraform” {
   count = "1"
-    ami = “ami-12345qwert”
+    ami = “ami-0b0dcb5067f052a63”
     instance_type = “t2.micro”
-      key_name = "ramkeynew"
-  subnet_id = "subnet-098833647248" 
-  security_groups = ["sg-0984239042423429"]
+      key_name = "Ansible"
+  subnet_id = "subnet-00f3a3ba8c280c836" 
+  security_groups = ["sg-00f2df5a62e6dcecc"]
   tags=
     {
-      Name= "ramserver1"
+      Name= "Ansible"
       Env= "dev"
     }
 }
